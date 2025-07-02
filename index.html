@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Map Toggle Button -->
+    <button id="map-toggle-btn" class="map-toggle-btn" title="Open Weather Map">
+            🗺️
+        </button>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Search for a city...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div id="weather-container" class="weather-container">
+            <!-- Weather data will be injected here -->
+        </div>
+        
+        <!-- Map Overlay -->
+        <div id="map-overlay" class="map-overlay hidden">
+            <div class="map-container">
+                <div class="map-header">
+                    <h2>Weather Map</h2>
+                    <div class="map-controls">
+                        <button id="reset-rotation-btn" class="reset-rotation-btn" title="Reset Map Rotation">🧭</button>
+                        <button id="locate-btn" class="locate-btn" title="Go to My Location">📍</button>
+                        <button id="map-close-btn" class="map-close-btn" title="Close Map">×</button>
+                    </div>
+                </div>
+                <div class="rotation-indicator" id="rotation-indicator">🧭 Hold Ctrl + Drag to Rotate</div>
+                <div id="weather-map"></div>
+            </div>
+        </div>
+
+        <div id="history-container" class="history-container">
+            <h2>Search History</h2>
+            <ul id="history-list">
+                <!-- Search history will be populated here -->
+            </ul>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-rotatedmarker@0.2.0/leaflet.rotatedMarker.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
