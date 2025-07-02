@@ -34,7 +34,7 @@ Before running this project, you'll need:
 1. Open the `script.js` file in your project
 2. Find line 2 where it says:
    ```javascript
-   const API_KEY = 'f3b72e1cc9c945fea3e105639252506';
+   const API_KEY = 'f3b72e1cc9c945fea3e10563925250612';
    ```
 3. Replace the existing API key with your own:
    ```javascript
